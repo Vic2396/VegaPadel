@@ -1,0 +1,80 @@
+/**footer**/
+footer{
+    height: max-content;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    column-gap: 2rem;
+    background: black;
+    padding-top: 3rem;
+    padding-left: 15%;
+    padding-right: 15%;
+    box-shadow: 0px 0px 5px rgb(167, 250, 14);
+}
+.apartado{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+.titulo-apartado{
+    height: 2rem;
+}
+.apartado .icono{
+    display: flex;
+    justify-content: center;
+}
+.apartado .icono a{
+    width: max-content;
+    height: max-content;
+    display: flex;
+    justify-content: start;
+    align-items: start;
+}
+.apartado .icono img{
+    width: 8rem;
+    height: 8rem;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.apartado h4{
+    font-size: 1.1rem;
+    color: white;
+}
+.enlaces{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+.plataformas{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding-bottom: 2rem;
+}
+.media{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    list-style-type: none;
+}
+.media img{
+    display: flex;
+    height: 2em;
+    width: 2em;
+}
+.link-footer{
+    color: white;
+    font-weight: bold;
+    font-style: italic;
+}
+.metodos-pago{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: start;
+    justify-content: start;
+}
+.metodos-pago img{
+    width: 5rem;
+}
