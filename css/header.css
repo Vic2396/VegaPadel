@@ -89,7 +89,7 @@
 .lista-seccion li:hover .circulo{
     display: flex;
 }
-.circulo{
+.navegador .circulo{
     display: none;
     width: 0.5rem;
     height: 0.5rem;
