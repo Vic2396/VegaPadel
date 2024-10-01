@@ -51,30 +51,30 @@ main{
     justify-content: center;
 }
 .promocion{
-    width: 60rem;
-    height: max-content;
     display: flex;
     flex-direction: column;
     gap: 20px;
     padding: 2rem 0;
+}
+.img-promo{
+    width: 70rem;
+    height: 18rem;
     overflow: hidden;
+    scroll-behavior: smooth;
 }
 .lista-promocion{
     width: max-content;
-    height: 15rem;
+    height: 100%;
     display: flex;
     flex-direction: row;
 }
 .lista-promocion li{
-    width: 60rem; 
+    width: 70rem; 
     height: 100%;
     display: flex; 
     justify-content: center;
     align-items: center;
     scroll-snap-align: start;
-    scroll-behavior: smooth;
-    animation: scroll 25s infinite alternate;
-    animation-timing-function: ease-in-out;
 }
 .lista-promocion a{
     width: 100%;
@@ -86,26 +86,6 @@ main{
     height: 100%;
     display: block;
     object-fit: cover;
-}
-@keyframes scroll {
-    0% { transform: translateX(0); }
-    20% { transform: translateX(0); } /* Pausa para el primer contenido */
-    30% { transform: translateX(-100%); } /* Desplazamiento al segundo contenido */
-    50% { transform: translateX(-100%); } /* Pausa para el segundo contenido */
-    60% { transform: translateX(-200%); } /* Desplazamiento al tercer contenido */
-    80% { transform: translateX(-200%); } /* Pausa para el tercer contenido */
-    90% { transform: translateX(-300%); } /* Desplazamiento al cuarto contenido */
-    100% { transform: translateX(-300%); } /* Pausa breve para el cuarto contenido */
-}
-@keyframes scroll-reverse {
-    0% { transform: translateX(0); }
-    20% { transform: translateX(0); } /* Pausa para el primer contenido */
-    30% { transform: translateX(-300%); } /* Desplazamiento al cuarto contenido */
-    50% { transform: translateX(-300%); } /* Pausa para el cuarto contenido */
-    60% { transform: translateX(-200%); } /* Desplazamiento al tercer contenido */
-    80% { transform: translateX(-200%); } /* Pausa para el tercer contenido */
-    90% { transform: translateX(-100%); } /* Desplazamiento al segundo contenido */
-    100% { transform: translateX(-100%); } /* Pausa breve para el segundo contenido */
 }
 .nav-promo{
     display: flex;
