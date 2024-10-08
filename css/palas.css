@@ -1,0 +1,253 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+ul{
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+/**************/
+body{
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/**main**/
+main{
+    width: 100%;
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+    background-image: url(/media/pelota-pista.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+/*bloque de seccion*/
+.contenido{
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    grid-template-rows: repeat(2, max-content);
+    grid-template-areas: 
+    "cabecera-seccion cabecera-seccion"
+    "filtro productos";
+    padding: 3rem 15%;
+    gap: 1.5rem;
+    background: rgba(34, 34, 34, 0.85);
+}
+
+/*cabecera con imagenes 3d*/
+.cabecera-seccion{
+    grid-area: cabecera-seccion;
+    width: 100%;
+    height: 18rem;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    border-radius: 5px;
+    overflow: hidden;
+    background: url(/media/fondo-tipos-pala.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.cabecera-seccion .texto{
+    display: grid;
+    grid-template-rows: 1fr 3fr;
+    font-weight: 500;
+    color: white;
+    padding: 20px;
+    text-align: justify;
+    line-height: 1.8rem;
+    background: 
+    linear-gradient(to right, rgb(17, 41, 63) 50%, rgba(231, 19, 19, 0) 100%);
+}
+.cabecera-seccion .frase{
+    display: grid;
+    gap: 2rem;
+    padding-right: 5px;
+}
+.cabecera-seccion .frase h1{
+    font-size: 2.5rem;
+}
+.cabecera-seccion a{
+    color: white;
+    font-weight: bold;
+}
+.cabecera-seccion span{
+    font-weight: 900;
+}
+.cabecera-seccion .imagen3d{
+    display: grid;
+    grid-template-columns: repeat(
+        auto-fit, 
+        minmax(150px, 1fr)
+    );
+    justify-items: stretch;
+    gap: 50px;
+    padding: 20px;
+}
+
+.tipo-pala{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+.tipo-pala h2{
+    width: 100%;
+    padding: 5px 0;
+    text-align: center;
+    background: 
+    linear-gradient(to right, rgb(167, 250, 14) 35%, rgba(231, 19, 19, 0) 100%);
+}
+.tipo-pala .card{
+    width: 100%;
+    height: 100%;
+}
+.tipo-pala .card model-viewer{
+    width: 100%;
+    height: 100%;
+    transition: 0.4s;
+}
+.tipo-pala .card:hover model-viewer{
+    scale: 125%;
+}
+
+/*filtro*/
+.filtro{
+    grid-area: filtro;
+    width: 15rem;
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 5px;
+    position: sticky;
+    top: 10rem;
+}
+.categorias{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/*bloque de productos*/
+.productos{
+    grid-area: productos;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(220px, 1fr)
+    );
+    gap: 20px;
+    justify-items: stretch;
+}
+
+/*producto*/
+.productos .card{ 
+    height: 20rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    border-radius: 5px;
+    background: white;
+}    
+.productos .card:hover{
+    box-shadow: 0px 0px 20px greenyellow;
+}
+.img{
+    width: 80%;
+    height: 70%;
+    padding-top: 0.5rem;
+}
+.img img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: 0.3s;
+}
+.productos .card:hover .img img{
+    scale: 105%;
+    cursor: pointer;
+}
+.productos .card:hover .detalles{
+    bottom: 0;
+}
+
+/*detalles del producto*/
+.detalles{
+    width: 100%;
+    position: absolute;
+    bottom: -55px;
+    display: flex;
+    flex-direction: column;
+    padding: 0.5rem 1.5rem;
+    background: rgb(255, 255, 255);
+    transition: 0.3s;
+    z-index: 10;
+}
+.modelo{
+    height: 3.5rem;
+    text-align: center;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+}
+.modelo h3{
+    font-size: 0.9rem;
+    font-weight: normal;
+    color: black;
+}
+.precio{
+    height: 3rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    color: rgb(10, 22, 87);
+}
+.carrito{
+    height: 2.5rem;
+    display: flex;
+    justify-content: space-between;
+}
+.carrito button{
+    cursor: pointer;
+    padding: 5px;
+    border-radius:10px;
+    border: none;
+    font-weight: bold;
+    text-align: center;
+    color: white;
+    background: dodgerblue;
+} 
+#añadir-favorito{
+    background: none;
+}
+#añadir-favorito img{
+    width: 1.5rem;
+    height: 1rem;
+    height: max-content;
+    object-fit: contain;
+    transition: 0.3s;
+}
+#añadir-favorito img:hover{
+    scale: 130%;
+} 
+.carrito button:hover{
+    color: white;
+    background: navy;
+}

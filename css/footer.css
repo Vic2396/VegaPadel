@@ -13,7 +13,7 @@ footer{
 .apartado{
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
+    gap: 0.5rem;
 }
 .titulo-apartado{
     height: 2rem;
@@ -30,8 +30,8 @@ footer{
     align-items: start;
 }
 .apartado .icono img{
-    width: 8rem;
-    height: 8rem;
+    width: 10rem;
+    height: 10rem;
     border-radius: 50%;
     object-fit: cover;
 }

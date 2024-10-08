@@ -1,0 +1,336 @@
+{
+  "accessors": [
+    {
+      "bufferView": 2,
+      "componentType": 5126,
+      "count": 15998,
+      "max": [
+        9.843400955200195,
+        36.3583869934082,
+        1.7142243385314941
+      ],
+      "min": [
+        -9.843400955200195,
+        0.5652822256088257,
+        -1.789473295211792
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 191976,
+      "componentType": 5126,
+      "count": 15998,
+      "max": [
+        0.9999740719795227,
+        1.0,
+        1.0
+      ],
+      "min": [
+        -0.9999740123748779,
+        -1.0,
+        -1.0
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 1,
+      "componentType": 5126,
+      "count": 15998,
+      "max": [
+        0.9998944997787476,
+        0.9982830286026001
+      ],
+      "min": [
+        0.0,
+        0.02005431242287159
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "componentType": 5125,
+      "count": 28686,
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 383952,
+      "componentType": 5126,
+      "count": 1584,
+      "max": [
+        6.783683776855469,
+        27.62378692626953,
+        1.3215817213058472
+      ],
+      "min": [
+        -6.783683776855469,
+        24.767356872558594,
+        -1.3662468194961548
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 402960,
+      "componentType": 5126,
+      "count": 1584,
+      "max": [
+        0.829215943813324,
+        0.8302857875823975,
+        0.9986922144889832
+      ],
+      "min": [
+        -0.8292164206504822,
+        -0.8302804827690125,
+        -0.9986922144889832
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 127984,
+      "componentType": 5126,
+      "count": 1584,
+      "max": [
+        0.5763697028160095,
+        0.4618563652038574
+      ],
+      "min": [
+        0.3534659445285797,
+        0.20840273797512054
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "byteOffset": 114744,
+      "componentType": 5125,
+      "count": 2376,
+      "type": "SCALAR"
+    }
+  ],
+  "asset": {
+    "extras": {
+      "author": "AnisDY (https://sketchfab.com/AnisDY)",
+      "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+      "source": "https://sketchfab.com/3d-models/raquette-viborace-padel-c74b52b748cd43f3ba50ac726da29f86",
+      "title": "Raquette Viborace Padel"
+    },
+    "generator": "Sketchfab-16.21.0",
+    "version": "2.0"
+  },
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteLength": 124248,
+      "name": "floatBufferViews",
+      "target": 34963
+    },
+    {
+      "buffer": 0,
+      "byteLength": 140656,
+      "byteOffset": 124248,
+      "byteStride": 8,
+      "name": "floatBufferViews",
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 421968,
+      "byteOffset": 264904,
+      "byteStride": 12,
+      "name": "floatBufferViews",
+      "target": 34962
+    }
+  ],
+  "buffers": [
+    {
+      "byteLength": 686872,
+      "uri": "scene.bin"
+    }
+  ],
+  "images": [
+    {
+      "uri": "textures/raquette_MTL_baseColor.png"
+    },
+    {
+      "uri": "textures/raquette_MTL_metallicRoughness.png"
+    }
+  ],
+  "materials": [
+    {
+      "doubleSided": true,
+      "name": "raquette_MTL",
+      "pbrMetallicRoughness": {
+        "baseColorTexture": {
+          "index": 0
+        },
+        "metallicFactor": 0.0,
+        "metallicRoughnessTexture": {
+          "index": 1
+        }
+      }
+    }
+  ],
+  "meshes": [
+    {
+      "name": "raquette_raquette_MTL_0",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 1,
+            "POSITION": 0,
+            "TEXCOORD_0": 2
+          },
+          "indices": 3,
+          "material": 0,
+          "mode": 4
+        }
+      ]
+    },
+    {
+      "name": "barre_cote_raquette_MTL_0",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 5,
+            "POSITION": 4,
+            "TEXCOORD_0": 6
+          },
+          "indices": 7,
+          "material": 0,
+          "mode": 4
+        }
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "children": [
+        1
+      ],
+      "matrix": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        2.220446049250313e-16,
+        -1.0,
+        0.0,
+        0.0,
+        1.0,
+        2.220446049250313e-16,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "name": "Sketchfab_model"
+    },
+    {
+      "children": [
+        2
+      ],
+      "matrix": [
+        0.009999999776482582,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.009999999776482582,
+        0.0,
+        0.0,
+        -0.009999999776482582,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "name": "f83f8f115c154c97aad86cdc34ce7610.fbx"
+    },
+    {
+      "children": [
+        3
+      ],
+      "name": "RootNode"
+    },
+    {
+      "children": [
+        4,
+        6
+      ],
+      "name": "raquette"
+    },
+    {
+      "children": [
+        5
+      ],
+      "matrix": [
+        1.878523588180542,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.878523588180542,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.878523588180542,
+        0.0,
+        -1.4870699942548526e-06,
+        -0.8785235285758972,
+        0.03305266052484512,
+        1.0
+      ],
+      "name": "raquette"
+    },
+    {
+      "mesh": 0,
+      "name": "raquette_raquette_MTL_0"
+    },
+    {
+      "children": [
+        7
+      ],
+      "name": "barre_cote"
+    },
+    {
+      "mesh": 1,
+      "name": "barre_cote_raquette_MTL_0"
+    }
+  ],
+  "samplers": [
+    {
+      "magFilter": 9729,
+      "minFilter": 9987,
+      "wrapS": 10497,
+      "wrapT": 10497
+    }
+  ],
+  "scene": 0,
+  "scenes": [
+    {
+      "name": "Sketchfab_Scene",
+      "nodes": [
+        0
+      ]
+    }
+  ],
+  "textures": [
+    {
+      "sampler": 0,
+      "source": 0
+    },
+    {
+      "sampler": 0,
+      "source": 1
+    }
+  ]
+}

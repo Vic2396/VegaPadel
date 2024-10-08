@@ -1,0 +1,11 @@
+Model Information:
+* title:	Raquette Viborace Padel
+* source:	https://sketchfab.com/3d-models/raquette-viborace-padel-c74b52b748cd43f3ba50ac726da29f86
+* author:	AnisDY (https://sketchfab.com/AnisDY)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Raquette Viborace Padel" (https://sketchfab.com/3d-models/raquette-viborace-padel-c74b52b748cd43f3ba50ac726da29f86) by AnisDY (https://sketchfab.com/AnisDY) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
