@@ -52,7 +52,7 @@ main{
     grid-template-columns: 1fr 2fr;
     border-radius: 5px;
     overflow: hidden;
-    background: url(/media/fondo-tipos-pala.png);
+    background: url(./media/fondo-tipos-pala.png);
     background-repeat: no-repeat;
     background-size: cover;
 }
