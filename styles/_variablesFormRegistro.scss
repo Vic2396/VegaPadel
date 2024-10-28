@@ -1,0 +1,83 @@
+//Formulario
+$anchoForm: calc(15rem + 15vw);
+$gapForm: 1.5rem;
+$backgroundForm: none;
+$paddingForm: 0;
+$borderRadiusForm: 0;
+$rowsForm: 3; 
+
+//Fieldset 
+$displayFieldset: grid;
+$gapFieldset: 1.5rem;
+
+//Letra form 
+$lineHeight: 1.8rem;
+$fontWeight: bold;
+$textAlign: justify;
+
+//Bloque input
+$flexDirectionInput: column;
+$gapInput: 0.2rem;
+$cursorInput: auto;
+
+//Bloque input bloque opciones
+$flexDirectionInput2: row;
+$gapInput2: 1.5rem;
+$cursorInput2: auto;
+
+//Bloque input opciones
+$flexDirectionInput3: row;
+$gapInput3: 1rem;
+$cursorInput3: auto;
+
+//Bloque input opcion
+$flexDirectionInput4: row;
+$gapInput4: 5px;
+$cursorInput4: pointer;
+
+//Input
+$paddingInput: 0.2rem 0;
+$cursorInput: auto;
+$backgroundInput: none;
+$outlineInput: none;
+$borderInput: none;
+
+//Input opcion
+$paddingInput2: 0;
+$cursorInput2: pointer;
+$backgroundInput2: none;
+$outlineInput2: none;
+$borderInput2: none;
+
+//Bloque select
+$gridColumnSelect: span 2;
+$gridTColumnSelect: max-content 1fr;
+$gapSelect: 2rem;
+
+//Select
+$paddingSelect: 0 0 0 10px;
+$borderRadiusSelect: 5px;
+$fontWeightSelect: bold;
+$backgroundSelect: white;
+$borderSelect: none;
+
+//Bloque botón
+$displayBloqueBoton: flex;
+$gapBloqueBoton: 0.5rem;
+$alignItemsBloqueBoton: center;
+$justifyContentBloqueBoton: center;
+
+//Botón
+$widthBoton: 50%;
+$paddingBoton: 0.5rem 1rem;
+$borderRadiusBoton: 5px;
+$backgroundBoton: dodgerblue;
+$colorBoton: black;
+$borderBoton: none;
+
+//Enlaces
+$widthA: 100%;
+$textAlignA: center;
+$textDecorationA: none;
+$colorA: navy;
+

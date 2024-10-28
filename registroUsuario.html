@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <meta dir="ltr">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+        <meta name="description" content="Tienda de palas y pelotas de p&adel">
+        <meta name="autor" content="Victor Mora">
+        <meta name="date" content="17-09-2024">
+        <title>Tienda de p&aacute;del - Nosotros</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="./styles/FormRegistro.css">
+        <link rel="stylesheet" href="./css/footer.css">
+        <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+        <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
+    </head>
+
+    <body>
+        <header class="cabecera">
+            <section class="principal">
+                <div class="icono">
+                    <a href="./index.html"><img src="./media/icons/Copia de VEGA(2).svg" alt="Logo tienda"></a>
+                </div>
+            </section>
+        </header>
+        
+        <main>
+            <section class="general">
+                <h1>Registrar nuevo usuario</h1>
+                <article id="formularioRegistro">
+                    <form class="formulario" action="" method=""> 
+                        <fieldset>
+                            <legend>Datos Personales</legend>
+                            <label class="entrada">
+                                Nombre
+                                <input type="text" id="nombre" name="nombre" required>
+                            </label>
+                                
+                            <label class="entrada">
+                                Apellidos
+                                <input type="text" id="apellidos" name="apellidos" required>
+                            </label>
+
+                            <label class="entrada">
+                                Contrase&ntilde;a
+                                <input type="password" id="password" name="password" required>
+                            </label>
+
+                            <label class="entrada">
+                                Repita la contrase&ntilde;a
+                                <input type="password" id="repitePassword" name="repitePassword" required>
+                            </label>
+
+                            <label class="entrada">
+                                Tel&eacute;fono
+                                <input type="tel" id="tel" name="tel" pattern="\d{9}" placeholder="722685414" required>
+                            </label>
+                            
+                            <label class="entrada">
+                                Email
+                                <input type="email" id="email" name="email" required> 
+                            </label>
+
+                            <label class="entradaOpciones">
+                                Sexo:
+                                <div class="opciones">
+                                    <label class="opcion">
+                                        <input type="radio" class="sexo" name="sexo" value="hombre" checked="checked">
+                                        Hombre
+                                    </label>
+                                    <label class="opcion">
+                                        <input type="radio" class="sexo" name="sexo" value="mujer">
+                                        Mujer
+                                    </label>
+                                    <label class="opcion">
+                                        <input type="radio" class="sexo" name="sexo" value="otro">
+                                        Otro
+                                    </label>  
+                                </div>
+                            </label> 
+                        </fieldset>
+
+                        <fieldset>
+                            <legend>Domicilio</legend>
+                            <label class="entradaSelect">
+                                Tipo de v&iacute;a:
+                                <select id="tipoDireccion" name="tipoDireccion" required>
+                                    <option value="" selected>- selecciona -</option>
+                                    <option value="camino">Camino</option>
+                                    <option value="calle">Calle</option>
+                                    <option value="carretera">Carretera</option>
+                                    <option value="avenida">Avenida</option>
+                                </select>
+                            </label>
+
+                            <label class="entrada">
+                                Direcci&oacute;n
+                                <input type="text" id="direccion" name="direccion" required>
+                            </label>
+
+                            <label class="entrada">
+                                C.Postal
+                                <input type="text" id="codigoPostal" name="codigoPostal" required>
+                            </label>
+
+                            <label class="entrada">
+                                Provincia
+                                <input type="text" id="provincia" name="provincia" required>
+                            </label>
+
+                            <label class="entrada">
+                                Localidad
+                                <input type="text" id="localidad" name="localidad" required>
+                            </label>
+                        </fieldset>  
+
+                        <div class="botones">
+                            <button>Enviar</button>
+                        </div>
+                    </form>
+
+                    <div class="botones" id="opcionLogin">
+                        <p>¿Ya tienes una cuenta? <a href="./loginUsuario.html">Inicia sesi&oacute;n</a></p>
+                    </div>
+                </article>
+            </section>
+        </main>
+    </body>
+</html>

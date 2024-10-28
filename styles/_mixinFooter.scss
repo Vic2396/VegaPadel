@@ -1,0 +1,44 @@
+@mixin footer ($gridTColumn, $cg, $padding, $bxs) {
+    height: max-content;
+    display: grid;
+    grid-template-columns: $gridTColumn;
+    column-gap: $cg;
+    background: black;
+    padding: $padding;
+    box-shadow: $bxs;
+    justify-content: center;
+}
+@mixin apartados {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+@mixin tituloApartado ($h, $color, $fsize, $fstyle) {
+    height: $h;
+    color: $color;
+    font: {
+        size: $fsize;
+        style: $fstyle;
+    }
+}
+@mixin bloque ($flexDirection, $gap, $justifyContent, $alignItems, $padding:0) {
+    display: flex;
+    flex-direction: $flexDirection;
+    gap: $gap;
+    justify-content: $justifyContent;
+    align-items: $alignItems;
+    padding: $padding;
+}
+@mixin enlaces ($color, $fw, $fstyle) {
+    color: $color;
+    font: {
+        weight: $fw;
+        style: $fstyle;
+    }
+}
+@mixin img ($width, $height, $bradius, $objfit) {
+    width: $width;
+    height: $height;
+    border-radius: $bradius;
+    object-fit: $objfit;
+}

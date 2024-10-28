@@ -1,0 +1,45 @@
+@use 'variablesFooter' as *;
+@import 'mixinFooter';
+
+footer{
+    @include footer($gridTColumnFooter, $columnGapFooter, $paddingFooter, $boxShadowFooter);
+    .apartado {
+        @include apartados();
+        .icono {
+            @include bloque($flexDirectionBloque, $gapBloque, $justifyContentBloque, $alignItemsBloque, $paddingBloque);
+            a {
+                @include bloque($flexDirectionBloque2, $gapBloque2, $justifyContentBloque2, $alignItemsBloque2, $paddingBloque2);
+                width: max-content;
+                height: max-content;
+                img {
+                    @include img($widthImg, $heightImg, $borderRadiusImg, $objectFitImg);
+                }
+            }
+        }
+        h4 {
+            @include tituloApartado($heightTApartado, $colorTApartado, $fontSizeTApartado, $fontStyleTApartado);
+        }
+        .media {
+            @include bloque($flexDirectionBloque3, $gapBloque3, $justifyContentBloque3, $alignItemsBloque3, $paddingBloque3);
+            flex-wrap: wrap;
+            a {
+                img {
+                    @include img($widthImg2, $heightImg2, $borderRadiusImg2, $objectFitImg2);
+                }
+            }
+        }
+        .enlaces {
+            @include bloque($flexDirectionBloque4, $gapBloque4, $justifyContentBloque4, $alignItemsBloque4, $paddingBloque4);
+            .link-footer {
+                @include enlaces($colorEnlaces, $fontWeightEnlaces, $fontStyleEnlaces)
+            }
+        }
+        .metodosPago {
+            @include bloque($flexDirectionBloque5, $gapBloque5, $justifyContentBloque5, $alignItemsBloque5, $paddingBloque5);
+            flex-wrap: wrap;
+            img {
+                @include img($widthImg3, $heightImg3, $borderRadiusImg3, $objectFitImg3);
+            }
+        }
+    }
+}

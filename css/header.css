@@ -1,11 +1,77 @@
+@media (width < 1200px) {
+    .cabecera {
+        grid-template-rows: min-content;
+    }
+    .principal {
+        grid-template-columns: repeat(2, min-content) 1fr;
+        grid-template-areas: 
+        "menu icono elementos";
+        padding-left: 8%;
+        padding-right: 8%;
+    }
+    .navegador {
+        position: absolute;
+        left: 0;
+        top: 100%;
+        width: 10rem;
+        width: calc(8rem + 7vw);
+        height: 25rem;
+    }
+    .lista-seccion {
+        grid-template-rows: repeat(5, min-content);
+        grid-template-columns: 1fr;
+    }
+    .link-menu {
+        padding: 1rem 0.5rem;
+    }
+    .sub-completo {
+        left: 100%;
+        top: 0;
+        height: 100%;
+        
+    }
+    .lista-seccion li:hover .sub-completo{
+        display: grid;
+    }
+}
+@media (width >= 1200px) {
+    .cabecera {
+        grid-template-rows: repeat(2, min-content);
+    }
+    .principal {
+        grid-template-columns: min-content 1fr;
+        grid-template-areas: 
+        "icono elementos";
+        padding-left: 15%;
+        padding-right: 15%;
+    }
+    .navegador {
+        position: relative;
+    }
+    .lista-seccion {
+        grid-template-columns: repeat(5, 12rem);
+    }
+    .sub-completo {
+        left: 0;
+        top: 100%;
+        height: 24rem;
+        padding-top: 0.5rem;
+        padding-left: 15%;
+        padding-right: 15%;
+    }
+    .lista-seccion li:hover .sub-completo{
+        display: flex;
+    }
+}
+
 /**cabecera**/
 .cabecera{
-    width: 100%;
+    width: 100vw;
     height: max-content;
     position: sticky;
     top: 0;
     display: grid;
-    grid-template-rows: repeat(3, min-content);
+    grid-template-columns: 1fr;
     background: white;
     z-index: 100;
 }
@@ -15,12 +81,16 @@
     height: 5rem;
     position: relative;
     display: grid;
-    grid-template-columns: repeat(2, minmax(200px, 1fr));
-    grid-template-areas: 
-    "icono elementos";
-    column-gap: 1rem;
-    padding-left: 15%;
-    padding-right: 15%;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+.principal .menuHamburguesa {
+    grid-area: menu;
+}
+.principal .menuHamburguesa img{
+    width: 1.5rem;
+    height: 1.5rem;
 }
 .principal .icono{
     grid-area: icono;
@@ -35,15 +105,16 @@
 }
 .elementos{
     grid-area: elementos;
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr, repeat(3, max-content);
+    grid-auto-flow: column;
     justify-content: end;
     align-items: center;
     gap: 1rem;
 }
 .elementos input{
-    /*width: 15rem;*/
-    min-width: 70px;
-    max-width: 300px;
+    min-width: 65px;
+    width: 100%;
     height: 2rem;
     padding-left: 5px;
     border: 1px solid rgb(194, 194, 194);
@@ -51,7 +122,10 @@
 }
 .elementos input:focus{
     outline: none;
-    border: 1px solid rgb(0, 0, 0);
+    border: 1px solid rgba(0, 0, 0, 0.5);
+}
+.elementos input::placeholder{
+    font-style: italic;
 }
 .elementos img{
     width: 1.5rem;
@@ -59,15 +133,15 @@
 }
 
 /*cabecera - menu de secciones*/
-.navegador{
-    position: relative;
-}
+
 .lista-seccion{
-    height: 3.5rem;
+    width: 100%;
+    height: 100%;
+    min-height: 3.5rem;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(7rem, 1fr));
-    padding-left: 15%;
-    padding-right: 15%;
+    justify-content: center;
+    /*padding-left: 15%;
+    padding-right: 15%;*/
     background: black;
     box-shadow: 0px 3px 5px rgb(167, 250, 14);
 }
@@ -77,7 +151,7 @@
 }
 .link-menu{
     height: 100%;
-    font-weight: bold; /*negrita*/
+    font-weight: bold;
     display: flex;
     flex-direction: column;
     gap: 0.2rem;
@@ -102,15 +176,9 @@
 /*cabecera - menu subsecciones*/
 .sub-completo{
     width: 100%;
-    height: 24rem;
     position: absolute;
-    left: 0;
-    top: 100%;
     display: none;
     justify-items: space-between;
-    padding-top: 0.5rem;
-    padding-left: 15%;
-    padding-right: 15%;
     background: rgba(0, 0, 0, 0.95);
     box-shadow: 0px 3px 5px rgb(167, 250, 14);
 }

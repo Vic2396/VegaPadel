@@ -1,0 +1,71 @@
+//Footer
+$gridTColumnFooter: repeat(5, 1fr);
+$columnGapFooter: 1.5rem;
+$paddingFooter: 1.5rem 15% 1rem 15%;
+$boxShadowFooter: 0px 0px 5px rgb(167, 250, 14);
+
+//Título apartado
+$heightTApartado: 2.5rem;
+$colorTApartado: white;
+$fontSizeTApartado: 1.1rem;
+$fontStyleTApartado: normal;
+
+//Bloque icono
+$flexDirectionBloque: column;
+$gapBloque: 0;
+$justifyContentBloque: center;
+$alignItemsBloque: center;
+$paddingBloque: 0;
+
+//Bloque icono logo
+$flexDirectionBloque2: column;
+$gapBloque2: 0;
+$justifyContentBloque2: start;
+$alignItemsBloque2: start;
+$paddingBloque2: 0;
+
+//Bloque media
+$flexDirectionBloque3: row;
+$gapBloque3: 5px;
+$justifyContentBloque3: space-between;
+$alignItemsBloque3: center;
+$paddingBloque3: 0;
+
+//Bloque enlaces
+$flexDirectionBloque4: column;
+$gapBloque4: 0.5rem;
+$justifyContentBloque4: start;
+$alignItemsBloque4: start;
+$paddingBloque4: 0;
+
+//Bloque métodos de pago
+$flexDirectionBloque5: row;
+$gapBloque5: 10px;
+$justifyContentBloque5: center;
+$alignItemsBloque5: start;
+$paddingBloque5: 0;
+
+//Enlaces
+$colorEnlaces: white;
+$fontWeightEnlaces: bold;
+$fontStyleEnlaces: italic;
+ 
+//Img logo
+$widthImg: 10rem;
+$heightImg: 10rem;
+$borderRadiusImg: 0;
+$objectFitImg: cover;
+
+//Img media
+$widthImg2: 2rem;
+$heightImg2: 2rem;
+$borderRadiusImg2: 0;
+$objectFitImg2: contain;
+
+//Img pago
+$widthImg3: 5rem;
+$heightImg3: auto;
+$borderRadiusImg3: 0;
+$objectFitImg3: contain;
+
+    

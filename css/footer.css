@@ -67,7 +67,7 @@ footer{
     font-weight: bold;
     font-style: italic;
 }
-.metodos-pago{
+.metodosPago{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -75,6 +75,6 @@ footer{
     align-items: start;
     justify-content: start;
 }
-.metodos-pago img{
+.metodosPago img{
     width: 5rem;
 }

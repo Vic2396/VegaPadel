@@ -1,0 +1,95 @@
+footer {
+  height: -moz-max-content;
+  height: max-content;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  -moz-column-gap: 1.5rem;
+       column-gap: 1.5rem;
+  background: black;
+  padding: 1.5rem 15% 1rem 15%;
+  box-shadow: 0px 0px 5px rgb(167, 250, 14);
+  justify-content: center;
+}
+footer .apartado {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+footer .apartado .icono {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+}
+footer .apartado .icono a {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  justify-content: start;
+  align-items: start;
+  padding: 0;
+  width: -moz-max-content;
+  width: max-content;
+  height: -moz-max-content;
+  height: max-content;
+}
+footer .apartado .icono a img {
+  width: 10rem;
+  height: 10rem;
+  border-radius: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+footer .apartado h4 {
+  height: 2.5rem;
+  color: white;
+  font-size: 1.1rem;
+  font-style: normal;
+}
+footer .apartado .media {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0;
+  flex-wrap: wrap;
+}
+footer .apartado .media a img {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 0;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+footer .apartado .enlaces {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  justify-content: start;
+  align-items: start;
+  padding: 0;
+}
+footer .apartado .enlaces .link-footer {
+  color: white;
+  font-weight: bold;
+  font-style: italic;
+}
+footer .apartado .metodosPago {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  justify-content: center;
+  align-items: start;
+  padding: 0;
+  flex-wrap: wrap;
+}
+footer .apartado .metodosPago img {
+  width: 5rem;
+  height: auto;
+  border-radius: 0;
+  -o-object-fit: contain;
+     object-fit: contain;
+}/*# sourceMappingURL=footer.css.map */

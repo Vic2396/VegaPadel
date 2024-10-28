@@ -1,0 +1,219 @@
+/**************/
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/**************/
+body {
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: max-content 1fr;
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(./media/pelota-pista.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+/**cabecera**/
+.cabecera {
+  width: 100vw;
+  height: -moz-max-content;
+  height: max-content;
+  position: sticky;
+  top: 0;
+  display: grid;
+  background: rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 1px 3px rgb(167, 250, 14);
+  z-index: 100;
+}
+
+/*cabecera principal*/
+.principal {
+  min-width: -moz-min-content;
+  min-width: min-content;
+  height: -moz-max-content;
+  height: max-content;
+  display: grid;
+  justify-content: center;
+}
+
+.principal .icono {
+  grid-area: icono;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icono img {
+  width: 5rem;
+  height: 5rem;
+}
+
+/**************/
+main {
+  width: 100%;
+  height: 100%;
+}
+
+.general {
+  display: grid;
+  grid-template-rows: min-content 1fr;
+  gap: 2rem;
+  padding: 3rem 20px;
+  justify-items: center;
+}
+.general h1 {
+  color: white;
+}
+
+#formularioRegistro {
+  height: -moz-max-content;
+  height: max-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  border-radius: 5px;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.6);
+}
+#formularioRegistro .formulario {
+  width: calc(15rem + 15vw);
+  min-width: -moz-max-content;
+  min-width: max-content;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(3, max-content);
+  gap: 1.5rem;
+  padding: 0;
+  background: none;
+  border-radius: 0;
+}
+#formularioRegistro .formulario fieldset {
+  display: grid;
+  gap: 1.5rem;
+  border: none;
+  max-width: 100%;
+  grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+}
+#formularioRegistro .formulario fieldset legend {
+  display: none;
+}
+#formularioRegistro .formulario fieldset .entrada {
+  line-height: 1.8rem;
+  font-weight: bold;
+  text-align: justify;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+#formularioRegistro .formulario fieldset .entrada:hover {
+  cursor: auto;
+}
+#formularioRegistro .formulario fieldset .entrada input {
+  padding: 0.2rem 0;
+  background: none;
+  border: none;
+  border-bottom: 1px solid black;
+}
+#formularioRegistro .formulario fieldset .entrada input:hover {
+  cursor: auto;
+}
+#formularioRegistro .formulario fieldset .entrada input:focus {
+  outline: none;
+}
+#formularioRegistro .formulario fieldset .entradaOpciones {
+  line-height: 1.8rem;
+  font-weight: bold;
+  text-align: justify;
+  display: flex;
+  flex-direction: row;
+  gap: 1.5rem;
+  width: -moz-max-content;
+  width: max-content;
+}
+#formularioRegistro .formulario fieldset .entradaOpciones:hover {
+  cursor: pointer;
+}
+#formularioRegistro .formulario fieldset .entradaOpciones .opciones {
+  line-height: 1.8rem;
+  font-weight: bold;
+  text-align: justify;
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+#formularioRegistro .formulario fieldset .entradaOpciones .opciones:hover {
+  cursor: auto;
+}
+#formularioRegistro .formulario fieldset .entradaOpciones .opciones .opcion {
+  line-height: 1.8rem;
+  font-weight: bold;
+  text-align: justify;
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+}
+#formularioRegistro .formulario fieldset .entradaOpciones .opciones .opcion:hover {
+  cursor: pointer;
+}
+#formularioRegistro .formulario fieldset .entradaOpciones .opciones .opcion input {
+  padding: 0;
+  background: none;
+  border: none;
+}
+#formularioRegistro .formulario fieldset .entradaOpciones .opciones .opcion input:hover {
+  cursor: pointer;
+}
+#formularioRegistro .formulario fieldset .entradaOpciones .opciones .opcion input:focus {
+  outline: none;
+}
+#formularioRegistro .formulario fieldset .entradaSelect {
+  line-height: 1.8rem;
+  font-weight: bold;
+  text-align: justify;
+  grid-column: span 2;
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 2rem;
+}
+#formularioRegistro .formulario fieldset .entradaSelect select {
+  padding: 0 0 0 10px;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  background: white;
+}
+#formularioRegistro .formulario fieldset .entradaSelect select:hover {
+  cursor: pointer;
+}
+#formularioRegistro .formulario fieldset .entradaSelect select:focus {
+  outline: none;
+}
+#formularioRegistro .botones {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  justify-content: center;
+}
+#formularioRegistro .botones button {
+  width: 50%;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
+  background: dodgerblue;
+  color: black;
+}
+#formularioRegistro .botones button:hover {
+  background: #0077ea;
+  cursor: pointer;
+}
+#formularioRegistro .botones a {
+  width: 100%;
+  text-align: center;
+  text-decoration: none;
+  color: navy;
+}/*# sourceMappingURL=FormRegistro.css.map */

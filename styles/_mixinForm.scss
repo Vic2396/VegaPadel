@@ -1,0 +1,107 @@
+@mixin article {
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    border-radius: 5px;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.6);
+}
+@mixin formulario ($width, $gap, $bg, $padding, $borderRadius, $rows) {
+    width: $width;
+    min-width: max-content;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat($rows, max-content);
+    gap: $gap;
+    padding: $padding;
+    background: $bg;
+    border-radius: $borderRadius;
+}
+@mixin fieldset ($d, $gap){
+    display: $d;
+    gap: $gap;
+    border: none;
+    legend {
+        display: none;
+    }
+}
+@mixin tipoLetra {
+    line-height: 1.8rem;
+    font-weight: bold;
+    text-align: justify;
+}
+@mixin BloqueInput ($flexDirection, $gap, $cursor:default) {
+    @include tipoLetra();
+    display: flex;
+    flex-direction: $flexDirection;
+    gap: $gap;
+    &:hover {
+        cursor: $cursor;
+    }
+}
+@mixin input ($padding, $cursor:auto, $bg:none, $outline:none, $border:none) {
+    padding: $padding;
+    background: $bg;
+    border: $border;
+    &:hover {
+        cursor: $cursor;
+    }
+    &:focus {
+        outline: $outline;
+    }
+}
+@mixin bloqueSelect ($gridColumn, $gridTColumn, $gap) {
+    grid-column: $gridColumn;
+    display: grid;
+    grid-template-columns: $gridTColumn;
+    gap: $gap;
+}
+@mixin select ($padding, $borderRadius, $fw, $bg:white, $border:none) {
+    padding: $padding;
+    border: $border;
+    border-radius: $borderRadius;
+    font-weight: $fw;
+    background: $bg;
+    &:hover {
+        cursor: pointer;
+    }
+    &:focus {
+        outline: none;
+    }
+}
+@mixin opcionBotones ($d, $gap, $alignItems, $justifyContent) {
+    display: $d;
+    gap: $gap;
+    align-items: $alignItems;
+    justify-content: $justifyContent;
+}
+@mixin boton ($width, $padding, $borderRadius, $bg, $color:black, $border:none) {
+    width: $width;
+    padding: $padding;
+    border: $border;
+    border-radius: $borderRadius;
+    background: $bg;
+    color: $color;
+    &:hover {
+        background: darken($bg, 10%);
+        cursor: pointer;
+    }
+}
+@mixin a ($width, $textAlign, $textDecoration, $color) {
+    width: $width;
+    text-align: $textAlign;
+    text-decoration: $textDecoration;
+    color: $color;
+}
+@mixin article {
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    border-radius: 5px;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.6);
+}

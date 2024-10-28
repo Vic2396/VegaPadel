@@ -1,0 +1,48 @@
+//Formulario
+$anchoForm: calc(10rem + 10vw);
+$gapForm: 0.8rem;
+$backgroundForm: none;
+$paddingForm: 0;
+$borderRadiusForm: 0;
+$rowsForm: 2; 
+
+//Fieldset
+$displayFieldset: grid;
+$gapFieldset: 1.5rem;
+
+//Letra form
+$lineHeight: 1.8rem;
+$fontWeight: bold;
+$textAlign: justify;
+
+//Bloque input
+$flexDirectionInput: column;
+$gapInput: 0.2rem;
+$cursorInput: auto;
+
+//Input
+$paddingInput: 0.2rem 0;
+$cursorInput: auto;
+$backgroundInput: none;
+$outlineInput: none;
+$borderInput: none;
+
+//Bloque botón
+$displayBloqueBoton: flex;
+$gapBloqueBoton: 0.5rem;
+$alignItemsBloqueBoton: center;
+$justifyContentBloqueBoton: center;
+
+//Botón
+$widthBoton: 100%;
+$paddingBoton: 0.5rem 1rem;
+$borderRadiusBoton: 5px;
+$backgroundBoton: dodgerblue;
+$colorBoton: black;
+$borderBoton: none;
+
+//Enlaces
+$widthA: 100%;
+$textAlignA: center;
+$textDecorationA: none;
+$colorA: navy;
