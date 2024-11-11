@@ -2,79 +2,92 @@
 footer{
     height: max-content;
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    column-gap: 2rem;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, max-content);
+    gap: 2rem;
     background: black;
-    padding-top: 3rem;
-    padding-left: 15%;
-    padding-right: 15%;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 5%;
+    padding-right: 5%;
     box-shadow: 0px 0px 5px rgb(167, 250, 14);
 }
 .apartado{
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 0.5rem;
+    
 }
-.titulo-apartado{
-    height: 2rem;
-}
-.apartado .icono{
-    display: flex;
-    justify-content: center;
-}
-.apartado .icono a{
+.apartado .icono {
     width: max-content;
     height: max-content;
     display: flex;
-    justify-content: start;
-    align-items: start;
+    
 }
 .apartado .icono img{
-    width: 10rem;
-    height: 10rem;
-    border-radius: 50%;
+    width: 8rem;
+    height: 8rem;
     object-fit: cover;
 }
-.apartado h4{
-    font-size: 1.1rem;
-    color: white;
-}
-.enlaces{
+.apartado .media{
     display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
+    padding-bottom: 1rem;
 }
-.plataformas{
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-    padding-bottom: 2rem;
-}
-.media{
+.media ul{
     display: flex;
     flex-direction: row;
+    gap: 1rem;
     flex-wrap: wrap;
-    justify-content: space-between;
     list-style-type: none;
+    
 }
 .media img{
     display: flex;
     height: 2em;
     width: 2em;
 }
+summary{
+    width: 100%;
+    height: 2rem;
+    font-size: 1.1rem;
+    color: white;
+    padding: 0.5rem;
+}
+summary:hover{
+    cursor: pointer;
+    background: greenyellow;
+}
+.enlaces{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    
+}
 .link-footer{
     color: white;
     font-weight: bold;
     font-style: italic;
 }
-.metodosPago{
+details ul {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    list-style-type: none;
+    padding: 0.5rem;
+}
+#metodosPago{
+    display: flex;
+}
+#metodosPago ul {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     gap: 10px;
-    align-items: start;
-    justify-content: start;
+    align-items: center;
+    justify-content: space-between;
+    list-style-type: none;
 }
-.metodosPago img{
-    width: 5rem;
+#metodosPago img{
+    width: 3rem;
 }

@@ -1,71 +1,160 @@
+/**********************/
+
 //Footer
-$gridTColumnFooter: repeat(5, 1fr);
-$columnGapFooter: 1.5rem;
-$paddingFooter: 1.5rem 15% 1rem 15%;
+$gridTColumnFooterL: min-content 1fr min-content;
+$gridTRowFooterL: 1fr;
+$gapFooterL: 1.5rem;
+$paddingFooterL: 1.5rem 8% 1rem 8%;
+$gridTAreaFooterL: "logoRedes info pago";
+
+$gridTColumnFooterM: 1fr;
+$gridTRowFooterM: repeat(3, max-content);
+$gapFooterM: 1.5rem;
+$paddingFooterM: 1.5rem 5% 1rem 5%;
+$gridTAreaFooterM:  
+"info"
+"pago"
+"logoRedes";  
+
+$gridTColumnFooterS: 1fr;
+$gridTRowFooterS: repeat(3, max-content);
+$gapFooterS: 1.5rem;
+$paddingFooterS: 1rem 5% 1rem 5%;
+$gridTAreaFooterS:  
+"info"
+"pago"
+"logoRedes";  
+
+$heightFooter: max-content;
+$justifyContentFooter: center;
+$backgroundFooter: black;
 $boxShadowFooter: 0px 0px 5px rgb(167, 250, 14);
 
-//Título apartado
-$heightTApartado: 2.5rem;
+/**********************/
+
+//Apartado
+$gridAreaA1: logoRedes;
+$gridAreaA2: pago;
+
+/**********************/
+
+//Título de apartado enlaces
+$widthTApartadoL: 100%;
+$heightTApartadoL: 100%;
+$fontSizeTApartadoL: calc(0.2rem + 1vw);
+
+$widthTApartadoM: 100%;
+$heightTApartadoM: 100%;
+$fontSizeTApartadoM: calc(0.4rem + 1.3vw);
+
+$widthTApartadoS: 100%;
+$heightTApartadoS: 100%;
+$fontSizeTApartadoS: 1.2rem;
+
 $colorTApartado: white;
-$fontSizeTApartado: 1.1rem;
 $fontStyleTApartado: normal;
+$paddingTApartado: 0.5rem 1rem;
+$backgroundTApartado: rgb(0, 0, 0);
+$cursorTApartado: pointer;
 
-//Bloque icono
-$flexDirectionBloque: column;
-$gapBloque: 0;
-$justifyContentBloque: center;
-$alignItemsBloque: center;
+/**********************/
+
+//Bloque de los enlaces
+$gridTColumnBloqueL: repeat(3, 1fr);
+$gridTRowBloqueL: 1fr;
+
+$gridTColumnBloqueM: repeat(3, 1fr);
+$gridTRowBloqueM: max-content;
+
+$gridTColumnBloqueS: 1fr;
+$gridTRowBloqueS: repeat(3, max-content);
+
+$gridAreaBloque: info;
+$gapBloque: 0.5rem;
 $paddingBloque: 0;
+$justifyContentBloque: center;
+$alignItemsBloque: start;
 
-//Bloque icono logo
-$flexDirectionBloque2: column;
-$gapBloque2: 0;
-$justifyContentBloque2: start;
-$alignItemsBloque2: start;
-$paddingBloque2: 0;
+/**********************/
 
-//Bloque media
-$flexDirectionBloque3: row;
-$gapBloque3: 5px;
-$justifyContentBloque3: space-between;
-$alignItemsBloque3: center;
-$paddingBloque3: 0;
+//Estilo de los enlaces
+$fontSizeEnlacesL: calc(0.2rem + 1vw);
 
-//Bloque enlaces
-$flexDirectionBloque4: column;
-$gapBloque4: 0.5rem;
-$justifyContentBloque4: start;
-$alignItemsBloque4: start;
-$paddingBloque4: 0;
+$fontSizeEnlacesM: calc(0.5rem + 1vw);
 
-//Bloque métodos de pago
-$flexDirectionBloque5: row;
-$gapBloque5: 10px;
-$justifyContentBloque5: center;
-$alignItemsBloque5: start;
-$paddingBloque5: 0;
+$fontSizeEnlacesS: 1rem;
 
-//Enlaces
+$displaEnlaces: grid;
+$alignItemsEnlaces: center;
+$paddingEnlaces: 0.5rem;
 $colorEnlaces: white;
 $fontWeightEnlaces: bold;
 $fontStyleEnlaces: italic;
+
+/**********************/
+
+//Lista de redes sociales
+$flexDirectionLista: row;
+$flexWrapLista: wrap;
+$gapLista: 1rem;
+$alignItemsLista: center;
+$justifyContentLista: center;
+$listStyleTypeLista: none;
+$paddingLista: 0;
+
+//Lista de enlaces
+$flexDirectionLista2: column;
+$flexWrapLista2: nowrap;
+$gapLista2: 0;
+$alignItemsLista2: start;
+$justifyContentLista2: start;
+$listStyleTypeLista2: none;
+$paddingLista2: 0;
+
+//Lista de métodos de pago
+$flexDirectionLista3: row;
+$flexWrapLista3: wrap;
+$gapLista3: 15px;
+$alignItemsLista3: center;
+$justifyContentLista3: space-between;
+$listStyleTypeLista3: none;
+$paddingLista3: 0;
+
+/**********************/
+
+//Línea de lista de enlaces
+$widthLinea: 100%;
+$backgroundLinea: rgb(22, 22, 22);
+
+/**********************/
  
 //Img logo
-$widthImg: 10rem;
-$heightImg: 10rem;
-$borderRadiusImg: 0;
+$widthImgL: 10rem;
+$heightImgL: 10rem;
+
+$widthImgM: 10rem;
+$heightImgM: 10rem;
+
+$widthImgS: 8rem;
+$heightImgS: 8rem;
+
 $objectFitImg: cover;
 
-//Img media
+/**********************/
+
+//Img redes sociales
 $widthImg2: 2rem;
 $heightImg2: 2rem;
-$borderRadiusImg2: 0;
 $objectFitImg2: contain;
 
-//Img pago
-$widthImg3: 5rem;
+//Img métodos de pago
+$widthImg3L: 5rem;
+
+$widthImg3M: 4.5rem;
+
+$widthImg3S: 3rem;
+
 $heightImg3: auto;
-$borderRadiusImg3: 0;
 $objectFitImg3: contain;
 
-    
+/**********************/

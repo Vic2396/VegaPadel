@@ -1,44 +1,137 @@
 @use 'variablesFooter' as *;
 @import 'mixinFooter';
+@import 'mixinMediaQuery';
 
-footer{
-    @include footer($gridTColumnFooter, $columnGapFooter, $paddingFooter, $boxShadowFooter);
-    .apartado {
-        @include apartados();
+footer{           
+    @include estrecho {
+        @include footer($gridTColumnFooterS, $gridTRowFooterS, $gapFooterS, $paddingFooterS, 
+                        $boxShadowFooter, $justifyContentFooter, $backgroundFooter, 
+                        $heightFooter, $gridTAreaFooterS);
+    }
+    @include medio {
+        @include footer($gridTColumnFooterM, $gridTRowFooterM, $gapFooterM, $paddingFooterM, 
+                        $boxShadowFooter, $justifyContentFooter, $backgroundFooter, 
+                        $heightFooter, $gridTAreaFooterM);                      
+    }
+    @include ancho {
+        @include footer($gridTColumnFooterL, $gridTRowFooterL, $gapFooterL, $paddingFooterL, 
+                        $boxShadowFooter, $justifyContentFooter, $backgroundFooter, 
+                        $heightFooter, $gridTAreaFooterL);
+    }
+    
+    #apartadoRedes {
+        @include apartado($gridAreaA1);
+        
         .icono {
-            @include bloque($flexDirectionBloque, $gapBloque, $justifyContentBloque, $alignItemsBloque, $paddingBloque);
-            a {
-                @include bloque($flexDirectionBloque2, $gapBloque2, $justifyContentBloque2, $alignItemsBloque2, $paddingBloque2);
-                width: max-content;
-                height: max-content;
-                img {
-                    @include img($widthImg, $heightImg, $borderRadiusImg, $objectFitImg);
+            width: max-content;
+            height: max-content;
+            img {
+                @include estrecho {
+                    @include img($widthImgS, $heightImgS, $objectFitImg);
+                }
+                @include medio {
+                    @include img($widthImgM, $heightImgM, $objectFitImg);
+                }
+                @include ancho {
+                    @include img($widthImgL, $heightImgL, $objectFitImg);
                 }
             }
-        }
-        h4 {
-            @include tituloApartado($heightTApartado, $colorTApartado, $fontSizeTApartado, $fontStyleTApartado);
         }
         .media {
-            @include bloque($flexDirectionBloque3, $gapBloque3, $justifyContentBloque3, $alignItemsBloque3, $paddingBloque3);
-            flex-wrap: wrap;
-            a {
-                img {
-                    @include img($widthImg2, $heightImg2, $borderRadiusImg2, $objectFitImg2);
+            padding-bottom: 1rem;
+            ul {
+                @include lista($flexDirectionLista, $flexWrapLista, $gapLista, $alignItemsLista, 
+                                $justifyContentLista, $listStyleTypeLista, $paddingLista);
+                li a img {
+                    @include estrecho {
+                        @include img($widthImg2, $heightImg2, $objectFitImg2);
+                    }
+                    @include medio {
+                        @include img($widthImg2, $heightImg2, $objectFitImg2);
+                    }
+                    @include ancho {
+                        @include img($widthImg2, $heightImg2, $objectFitImg2);
+                    }
                 }
             }
         }
-        .enlaces {
-            @include bloque($flexDirectionBloque4, $gapBloque4, $justifyContentBloque4, $alignItemsBloque4, $paddingBloque4);
-            .link-footer {
-                @include enlaces($colorEnlaces, $fontWeightEnlaces, $fontStyleEnlaces)
+    }
+    .enlaces {
+        @include estrecho {
+            @include bloque($gridTColumnBloqueS, $gridTRowBloqueS, $gapBloque, $justifyContentBloque, 
+                            $alignItemsBloque, $paddingBloque, $gridAreaBloque);
+        }
+        @include medio {
+            @include bloque($gridTColumnBloqueM, $gridTRowBloqueM, $gapBloque, $justifyContentBloque, 
+                            $alignItemsBloque, $paddingBloque, $gridAreaBloque);
+        }
+        @include ancho {
+            @include bloque($gridTColumnBloqueL, $gridTRowBloqueL, $gapBloque, $justifyContentBloque, 
+                            $alignItemsBloque, $paddingBloque, $gridAreaBloque);
+        }
+        
+        details {
+            border: 1px solid rgba(172, 255, 47, 0.5);
+            summary {
+                user-select: none;
+                @include estrecho {
+                    @include tituloInfo($widthTApartadoS, $heightTApartadoS, $fontSizeTApartadoS, 
+                                        $fontStyleTApartado, $colorTApartado, $paddingTApartado, 
+                                        $backgroundTApartado, $cursorTApartado)
+                }
+                @include medio {
+                    @include tituloInfo($widthTApartadoM, $heightTApartadoM, $fontSizeTApartadoM, 
+                                        $fontStyleTApartado, $colorTApartado, $paddingTApartado, 
+                                        $backgroundTApartado, $cursorTApartado)
+                }
+                @include ancho {
+                    @include tituloInfo($widthTApartadoL, $heightTApartadoL, $fontSizeTApartadoL, 
+                                        $fontStyleTApartado, $colorTApartado, $paddingTApartado, 
+                                        $backgroundTApartado, $cursorTApartado)
+                }
+            }
+            ul {
+                @include lista($flexDirectionLista2, $flexWrapLista2, $gapLista2, $alignItemsLista2, 
+                                $justifyContentLista2, $listStyleTypeLista2, $paddingLista2);
+
+                li {
+                    @include lineaLista($widthLinea, $backgroundLinea);
+
+                    a { 
+                        @include estrecho {
+                            @include estiloEnlaces($displaEnlaces, $alignItemsEnlaces, $paddingEnlaces, 
+                                                $colorEnlaces, $fontWeightEnlaces, $fontStyleEnlaces, $fontSizeEnlacesS);
+                        }
+                        @include medio {
+                            @include estiloEnlaces($displaEnlaces, $alignItemsEnlaces, $paddingEnlaces, 
+                                                $colorEnlaces, $fontWeightEnlaces, $fontStyleEnlaces, $fontSizeEnlacesM);
+                        }
+                        @include ancho {
+                            @include estiloEnlaces($displaEnlaces, $alignItemsEnlaces, $paddingEnlaces, 
+                                                $colorEnlaces, $fontWeightEnlaces, $fontStyleEnlaces, $fontSizeEnlacesL);
+                        }
+                    }
+                }
             }
         }
-        .metodosPago {
-            @include bloque($flexDirectionBloque5, $gapBloque5, $justifyContentBloque5, $alignItemsBloque5, $paddingBloque5);
-            flex-wrap: wrap;
-            img {
-                @include img($widthImg3, $heightImg3, $borderRadiusImg3, $objectFitImg3);
+    }
+    #metodosPago {
+        @include apartado($gridAreaA2);
+        
+        ul {
+            @include lista($flexDirectionLista3, $flexWrapLista3, $gapLista3, $alignItemsLista3, 
+                            $justifyContentLista3, $listStyleTypeLista3, $paddingLista3);
+
+            li img {
+                @include estrecho {
+                    @include img($widthImg3S, $heightImg3, $objectFitImg3);
+                }
+                @include medio {
+                    @include img($widthImg3M, $heightImg3, $objectFitImg3);
+                }
+                @include ancho {
+                    @include img($widthImg3L, $heightImg3, $objectFitImg3);
+                }
             }
         }
     }

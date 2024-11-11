@@ -1,0 +1,307 @@
+@import 'mixinMediaQuery';
+
+.cabecera {
+    width: 100vw;
+    height: max-content;
+    position: sticky;
+    top: 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    background: white;
+    z-index: 100;
+
+    @include estrecho {
+        grid-template-rows: min-content;
+    }
+    @include medio {
+        grid-template-rows: min-content;
+    }
+    @include ancho {
+        grid-template-rows: repeat(2, min-content);
+    }
+
+    .principal {
+        min-width: min-content;
+        height: 5rem;
+        position: relative;
+        display: grid;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1rem;
+    
+        @include estrecho {
+            grid-template-columns: repeat(2, min-content) 1fr;
+            grid-template-areas: 
+            "menu icono elementos";
+            padding-left: 1rem;
+            padding-right: 8%;
+        }
+        @include medio {
+            grid-template-columns: repeat(2, min-content) 1fr;
+            grid-template-areas: 
+            "menu icono elementos";
+            padding-left: 1rem;
+            padding-right: 8%;
+        }
+        @include ancho {
+            grid-template-columns: min-content 1fr;
+            grid-template-areas: 
+            "icono elementos";
+            padding-left: 15%;
+            padding-right: 15%;
+        }
+
+        .menuHamburguesa {
+            @include ancho {
+                display: none;
+            }
+
+            grid-area: menu;
+            button {
+                border: none;
+                background: none;
+                &:hover {
+                    cursor: pointer;
+                } 
+                img {
+                    width: 1.5rem;
+                    height: auto;
+                }
+            }
+        }
+        .icono {
+            grid-area: icono;
+            display: flex;
+            justify-content: start;
+            align-items: center;
+            img {
+                width: 5rem;
+                height: 5rem;
+                border-radius: 50%;
+            }
+        }
+        .elementos{
+            grid-area: elementos;
+            display: grid;
+            grid-template-columns: 1fr, repeat(3, max-content);
+            grid-auto-flow: column;
+            justify-content: end;
+            align-items: center;
+            gap: 1rem;
+            input {
+                min-width: 65px;
+                width: 100%;
+                height: 2rem;
+                padding-left: 5px;
+                border: 1px solid rgb(194, 194, 194);
+                border-radius: 5px;
+                &:focus {
+                    outline: none;
+                    border: 1px solid rgba(0, 0, 0, 0.5);
+                }
+                &::placeholder {
+                    font-style: italic;
+                }
+            }
+            img {
+                width: 1.5rem;
+                height: 1.5rem;
+            }
+        }
+    }
+    .navegador {
+        @include estrecho {
+            position: absolute;
+            left: 0;
+            top: 100%;
+            width: 10rem;
+            //width: calc(8rem + 7vw);
+            height: 25rem;
+        }
+        @include medio {
+            position: absolute;
+            left: 0;
+            top: 100%;
+            width: 10rem;
+            //width: calc(8rem + 7vw);
+            height: 25rem;
+        }
+        @include ancho {
+            position: relative;
+        }
+
+        .lista-seccion {
+            width: 100%;
+            height: 100%;
+            min-height: 3.5rem;
+            display: grid;
+            justify-content: center;
+            background: black;
+            box-shadow: 0px 3px 5px rgb(167, 250, 14);
+            display: none;
+    
+            @include estrecho {
+                grid-template-rows: repeat(5, min-content);
+                grid-template-columns: 1fr;
+            }
+            @include medio {
+                grid-template-rows: repeat(5, min-content);
+                grid-template-columns: 1fr;
+            }
+            @include ancho {
+                grid-template-columns: repeat(5, 12rem);
+            }
+    
+            li {
+                display: flex;
+                flex-direction: column;
+                &:hover {
+                    .link-menu .circulo, .sub-completo  {
+                        display: flex;
+                    }
+                }
+                .link-menu {
+                    height: 100%;
+                    font-weight: bold;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 0.2rem;
+                    align-items: center;
+                    justify-content: center;
+                    color: white;
+                    
+                    @include estrecho {
+                        padding: 1rem 0.5rem;
+                    }
+                    @include medio {
+                        padding: 1rem 0.5rem;
+                    }
+    
+                    .circulo {
+                        display: none;
+                        width: 0.5rem;
+                        height: 0.5rem;
+                        border-radius: 50%;
+                        background: rgb(167, 250, 14);
+                    }
+                }
+                .sub-completo {
+                    position: absolute;
+                    display: none;
+                    justify-items: space-between;
+                    background: rgba(0, 0, 0, 0.95);
+                    box-shadow: 0px 3px 5px rgb(167, 250, 14);
+                    
+                    @include estrecho {
+                        width: calc(100vw - 10rem);
+                        left: 100%;
+                        top: 0;
+                        height: 100%;
+                        font-size: 0.8rem;
+                    }
+                    @include medio {
+                        width: 18rem;
+                        left: 100%;
+                        top: 0;
+                        height: 100%;
+                    }
+                    @include ancho {
+                        width: 100%;
+                        left: 0;
+                        top: 100%;
+                        height: 24rem;
+                        padding-top: 0.5rem;
+                        padding-left: 15%;
+                        padding-right: 15%;
+                    }
+
+                    .subnavegador {
+                        display: flex;
+                        width: 100%;
+                        gap: 15px;
+                        padding-bottom: 0.5rem;
+                        flex-direction: column;
+                        align-content: start;
+
+                        @include estrecho {
+                            overflow: auto;
+                        }
+                        @include medio {
+                            overflow: auto;
+                        }
+                        @include ancho {
+                            height: 23rem;
+                            flex-wrap: wrap;
+                        }
+
+                        ul {
+                            .lista-subseccion {
+                                display: flex;
+                                flex-direction: column;
+
+                                @include ancho {
+                                    width: 18rem;
+                                    
+                                }
+
+                                h4 {
+                                    padding: 0.2rem 0.2rem;
+                                    background: linear-gradient(to right, rgb(167, 250, 14) 20%, rgba(231, 19, 19, 0) 95%);
+                                    color: black;
+                                }
+                                .link-seccion {
+                                    padding: 0.2rem 0.2rem;
+                                    color: white;
+                                    &:hover {
+                                        background: linear-gradient(to right, rgb(143, 143, 143) 50%, rgba(231, 19, 19, 0) 95%);
+                                        font-weight: bold;
+                                        color: black;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .card {
+                        min-width: max-content;
+                        min-height: max-content;
+                        align-self: center;
+                        display: flex;
+                        border-radius: 50%;
+                        overflow: hidden;
+                        box-shadow: 0px 0px 10px rgb(167, 250, 14);
+
+                        @include estrecho {
+                            position: absolute;
+                            bottom: 35px;
+                            left: -120px;
+                        }
+                        @include medio {
+                            position: absolute;
+                            bottom: 35px;
+                            left: -120px;
+                        }
+
+                        img {
+                            object-fit: cover;
+
+                            @include estrecho {
+                                width: 5rem;
+                                height: 5rem;   
+                            }
+                            @include medio {
+                                width: 5rem;
+                                height: 5rem;   
+                            }
+                            @include ancho {
+                                width: calc(5rem + 6vw);
+                                height: calc(5rem + 6vw);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+

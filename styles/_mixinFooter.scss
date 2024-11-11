@@ -1,44 +1,84 @@
-@mixin footer ($gridTColumn, $cg, $padding, $bxs) {
-    height: max-content;
+@mixin footer ($gridTColumn, $gridTRow, $gap, $padding, $bxs, 
+                $justifyContent, $bg, $height, $gridArea) {
+    height: $height;
     display: grid;
     grid-template-columns: $gridTColumn;
-    column-gap: $cg;
-    background: black;
+    grid-template-rows: $gridTRow;
+    gap: $gap;
+    background: $bg;
     padding: $padding;
     box-shadow: $bxs;
-    justify-content: center;
+    justify-content: $justifyContent;
+    grid-template-areas: $gridArea;
 }
-@mixin apartados {
+@mixin apartado ($nombreArea){
+    grid-area: $nombreArea;
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 0.5rem;
 }
-@mixin tituloApartado ($h, $color, $fsize, $fstyle) {
-    height: $h;
+@mixin tituloInfo ($width, $height, $fsize, $fstyle, 
+                        $color, $padding, $bg, $cursor) {
+    width: $width;
+    height: $height;
     color: $color;
+    padding: $padding;
+    background: $bg;
     font: {
         size: $fsize;
         style: $fstyle;
     }
+    &:hover {
+        cursor: $cursor;
+        background: darken($bg, 10%);
+    }
 }
-@mixin bloque ($flexDirection, $gap, $justifyContent, $alignItems, $padding:0) {
-    display: flex;
-    flex-direction: $flexDirection;
+@mixin bloque ($gridTColumn, $gridTRow, $gap, $justifyContent, 
+                $alignItems, $padding, $nombreArea) {
+    grid-area: $nombreArea;
+    display: grid;
+    grid-template-columns: $gridTColumn;
+    grid-template-rows: $gridTRow;
     gap: $gap;
     justify-content: $justifyContent;
     align-items: $alignItems;
     padding: $padding;
 }
-@mixin enlaces ($color, $fw, $fstyle) {
+@mixin estiloEnlaces ($display, $alignItems, $padding, $color, 
+                        $fw, $fstyle, $fsize) {
+    display: $display;
     color: $color;
+    align-items: $alignItems;
+    padding: $padding;
     font: {
         weight: $fw;
         style: $fstyle;
+        size: $fsize;
+    }
+    &:hover {
+        color: black;
     }
 }
-@mixin img ($width, $height, $bradius, $objfit) {
+@mixin lista ($flexDirection, $flexWrap, $gap, $alignItems, 
+                $justifyContent, $listStyleType, $padding) {
+    display: flex;
+    flex-direction: $flexDirection;
+    flex-wrap: $flexWrap;
+    gap: $gap;
+    align-items: $alignItems;
+    justify-content: $justifyContent;
+    list-style-type: $listStyleType;
+    padding: $padding;
+}
+@mixin lineaLista ($width, $bg) {
+    width: $width;
+    &:hover {
+        background: lighten($bg, 50%);
+    }
+}
+@mixin img ($width, $height, $objfit) {
     width: $width;
     height: $height;
-    border-radius: $bradius;
     object-fit: $objfit;
 }

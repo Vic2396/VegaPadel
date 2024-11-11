@@ -1,95 +1,317 @@
-footer {
-  height: -moz-max-content;
-  height: max-content;
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  -moz-column-gap: 1.5rem;
-       column-gap: 1.5rem;
-  background: black;
-  padding: 1.5rem 15% 1rem 15%;
-  box-shadow: 0px 0px 5px rgb(167, 250, 14);
-  justify-content: center;
+/**********************/
+/**********************/
+/**********************/
+/**********************/
+/**********************/
+/**********************/
+/**********************/
+/**********************/
+/**********************/
+/**********************/
+@media (width <= 641px) {
+  footer {
+    height: -moz-max-content;
+    height: max-content;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, max-content);
+    gap: 1.5rem;
+    background: black;
+    padding: 1rem 5% 1rem 5%;
+    box-shadow: 0px 0px 5px rgb(167, 250, 14);
+    justify-content: center;
+    grid-template-areas: "info" "pago" "logoRedes";
+  }
 }
-footer .apartado {
+@media ((width > 641px) and (width < 1008px)) {
+  footer {
+    height: -moz-max-content;
+    height: max-content;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, max-content);
+    gap: 1.5rem;
+    background: black;
+    padding: 1.5rem 5% 1rem 5%;
+    box-shadow: 0px 0px 5px rgb(167, 250, 14);
+    justify-content: center;
+    grid-template-areas: "info" "pago" "logoRedes";
+  }
+}
+@media (width >= 1008px) {
+  footer {
+    height: -moz-max-content;
+    height: max-content;
+    display: grid;
+    grid-template-columns: min-content 1fr min-content;
+    grid-template-rows: 1fr;
+    gap: 1.5rem;
+    background: black;
+    padding: 1.5rem 8% 1rem 8%;
+    box-shadow: 0px 0px 5px rgb(167, 250, 14);
+    justify-content: center;
+    grid-template-areas: "logoRedes info pago";
+  }
+}
+footer #apartadoRedes {
+  grid-area: logoRedes;
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 0.5rem;
 }
-footer .apartado .icono {
-  display: flex;
-  flex-direction: column;
-  gap: 0;
-  justify-content: center;
-  align-items: center;
-  padding: 0;
-}
-footer .apartado .icono a {
-  display: flex;
-  flex-direction: column;
-  gap: 0;
-  justify-content: start;
-  align-items: start;
-  padding: 0;
+footer #apartadoRedes .icono {
   width: -moz-max-content;
   width: max-content;
   height: -moz-max-content;
   height: max-content;
 }
-footer .apartado .icono a img {
-  width: 10rem;
-  height: 10rem;
-  border-radius: 0;
-  -o-object-fit: cover;
-     object-fit: cover;
+@media (width <= 641px) {
+  footer #apartadoRedes .icono img {
+    width: 8rem;
+    height: 8rem;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
 }
-footer .apartado h4 {
-  height: 2.5rem;
-  color: white;
-  font-size: 1.1rem;
-  font-style: normal;
+@media ((width > 641px) and (width < 1008px)) {
+  footer #apartadoRedes .icono img {
+    width: 10rem;
+    height: 10rem;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
 }
-footer .apartado .media {
+@media (width >= 1008px) {
+  footer #apartadoRedes .icono img {
+    width: 10rem;
+    height: 10rem;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+}
+footer #apartadoRedes .media {
+  padding-bottom: 1rem;
+}
+footer #apartadoRedes .media ul {
   display: flex;
   flex-direction: row;
-  gap: 5px;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0;
   flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+  list-style-type: none;
+  padding: 0;
 }
-footer .apartado .media a img {
-  width: 2rem;
-  height: 2rem;
-  border-radius: 0;
-  -o-object-fit: contain;
-     object-fit: contain;
+@media (width <= 641px) {
+  footer #apartadoRedes .media ul li a img {
+    width: 2rem;
+    height: 2rem;
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
 }
-footer .apartado .enlaces {
+@media ((width > 641px) and (width < 1008px)) {
+  footer #apartadoRedes .media ul li a img {
+    width: 2rem;
+    height: 2rem;
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+}
+@media (width >= 1008px) {
+  footer #apartadoRedes .media ul li a img {
+    width: 2rem;
+    height: 2rem;
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+}
+@media (width <= 641px) {
+  footer .enlaces {
+    grid-area: info;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, max-content);
+    gap: 0.5rem;
+    justify-content: center;
+    align-items: start;
+    padding: 0;
+  }
+}
+@media ((width > 641px) and (width < 1008px)) {
+  footer .enlaces {
+    grid-area: info;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: max-content;
+    gap: 0.5rem;
+    justify-content: center;
+    align-items: start;
+    padding: 0;
+  }
+}
+@media (width >= 1008px) {
+  footer .enlaces {
+    grid-area: info;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    gap: 0.5rem;
+    justify-content: center;
+    align-items: start;
+    padding: 0;
+  }
+}
+footer .enlaces details {
+  border: 1px solid rgba(172, 255, 47, 0.5);
+}
+footer .enlaces details summary {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+@media (width <= 641px) {
+  footer .enlaces details summary {
+    width: 100%;
+    height: 100%;
+    color: white;
+    padding: 0.5rem 1rem;
+    background: rgb(0, 0, 0);
+    font-size: 1.2rem;
+    font-style: normal;
+  }
+  footer .enlaces details summary:hover {
+    cursor: pointer;
+    background: black;
+  }
+}
+@media ((width > 641px) and (width < 1008px)) {
+  footer .enlaces details summary {
+    width: 100%;
+    height: 100%;
+    color: white;
+    padding: 0.5rem 1rem;
+    background: rgb(0, 0, 0);
+    font-size: calc(0.4rem + 1.3vw);
+    font-style: normal;
+  }
+  footer .enlaces details summary:hover {
+    cursor: pointer;
+    background: black;
+  }
+}
+@media (width >= 1008px) {
+  footer .enlaces details summary {
+    width: 100%;
+    height: 100%;
+    color: white;
+    padding: 0.5rem 1rem;
+    background: rgb(0, 0, 0);
+    font-size: calc(0.2rem + 1vw);
+    font-style: normal;
+  }
+  footer .enlaces details summary:hover {
+    cursor: pointer;
+    background: black;
+  }
+}
+footer .enlaces details ul {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
-  justify-content: start;
+  flex-wrap: nowrap;
+  gap: 0;
   align-items: start;
+  justify-content: start;
+  list-style-type: none;
   padding: 0;
 }
-footer .apartado .enlaces .link-footer {
-  color: white;
-  font-weight: bold;
-  font-style: italic;
+footer .enlaces details ul li {
+  width: 100%;
 }
-footer .apartado .metodosPago {
+footer .enlaces details ul li:hover {
+  background: #969696;
+}
+@media (width <= 641px) {
+  footer .enlaces details ul li a {
+    display: grid;
+    color: white;
+    align-items: center;
+    padding: 0.5rem;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 1rem;
+  }
+  footer .enlaces details ul li a:hover {
+    color: black;
+  }
+}
+@media ((width > 641px) and (width < 1008px)) {
+  footer .enlaces details ul li a {
+    display: grid;
+    color: white;
+    align-items: center;
+    padding: 0.5rem;
+    font-weight: bold;
+    font-style: italic;
+    font-size: calc(0.5rem + 1vw);
+  }
+  footer .enlaces details ul li a:hover {
+    color: black;
+  }
+}
+@media (width >= 1008px) {
+  footer .enlaces details ul li a {
+    display: grid;
+    color: white;
+    align-items: center;
+    padding: 0.5rem;
+    font-weight: bold;
+    font-style: italic;
+    font-size: calc(0.2rem + 1vw);
+  }
+  footer .enlaces details ul li a:hover {
+    color: black;
+  }
+}
+footer #metodosPago {
+  grid-area: pago;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+footer #metodosPago ul {
   display: flex;
   flex-direction: row;
-  gap: 10px;
-  justify-content: center;
-  align-items: start;
-  padding: 0;
   flex-wrap: wrap;
+  gap: 15px;
+  align-items: center;
+  justify-content: space-between;
+  list-style-type: none;
+  padding: 0;
 }
-footer .apartado .metodosPago img {
-  width: 5rem;
-  height: auto;
-  border-radius: 0;
-  -o-object-fit: contain;
-     object-fit: contain;
+@media (width <= 641px) {
+  footer #metodosPago ul li img {
+    width: 3rem;
+    height: auto;
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+}
+@media ((width > 641px) and (width < 1008px)) {
+  footer #metodosPago ul li img {
+    width: 4.5rem;
+    height: auto;
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+}
+@media (width >= 1008px) {
+  footer #metodosPago ul li img {
+    width: 5rem;
+    height: auto;
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
 }/*# sourceMappingURL=footer.css.map */

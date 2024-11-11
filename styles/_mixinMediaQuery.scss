@@ -1,0 +1,20 @@
+$desktop: 1008px;
+$tablet: 641px;
+
+@mixin estrecho {
+    @media (width <= $tablet) {
+        @content;
+    }
+}
+
+@mixin medio {
+    @media ((width > $tablet) and (width < $desktop)) {
+        @content;
+    }
+}
+
+@mixin ancho {
+    @media (width >= $desktop) {
+        @content;
+    }
+}

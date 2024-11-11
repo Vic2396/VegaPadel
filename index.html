@@ -9,18 +9,19 @@
         <meta name="date" content="17-09-2024">
         <title>Tienda de p&aacute;del - Inicio</title>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <link rel="stylesheet" href="./css/header.css">
+        <link rel="stylesheet" href="./styles/header.css">
         <link rel="stylesheet" href="./css/index.css">
         <link rel="stylesheet" href="./styles/footer.css">
         <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
         <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
+        <script src="./js/header.js" defer></script>
     </head>
 
     <body>
         <header class="cabecera">
             <section class="principal">
                 <div class="menuHamburguesa">
-                    <a href="./index.html"><img src="./media/icons/carrito.svg" alt="Carrito"></a>
+                    <button><img src="./media/icons/menu-line.svg" alt="Men&uacute; desplegable"></button>
                 </div>
                 <div class="icono">
                     <a href="./index.html"><img src="./media/icons/Copia de VEGA(2).svg" alt="Logo tienda"></a>
@@ -965,53 +966,52 @@
         </main>
         
         <footer>
-            <article class="apartado">
-                <div class="icono">
-                    <a href="./index.html"><img src="./media/icons/Copia de VEGA(3).svg" alt="Logo tienda"></a>
-                </div>
-                <article class="apartado">
-                    <h4>S&iacute;guenos en:</h4>
-                    <article class="media">
-                        <a class="link-media" href="https://wa.me/34722225886"><img src="./media/plataformas/whatsapp.png" alt="telefono"></a>
-                        <a class="link-media" href="mailto:vic23mora@gmail.com?"><img src="./media/plataformas/email.png" alt="email"></a>
-                        <a class="link-media" href="https://ig.me/m/@vic_mora23"><img src="./media/plataformas/instagram.png" alt="instagram"></a>
-                        <a class="link-media" href="https://www.facebook.com/victor.morarosique?"><img src="./media/plataformas/fb.png" alt="facebook"></a>
-                    </article>    
-                </article>
+            <article class="apartado" id="apartadoRedes">
+                <a href="./index.html" class="icono"><img src="./media/icons/Copia de VEGA(3).svg" alt="Logo tienda"></a>
+                <article class="media">
+                    <ul>
+                        <li><a class="link-media" href="https://wa.me/34722225886"><img src="./media/plataformas/whatsapp.png" alt="telefono"></a></li>
+                        <li><a class="link-media" href="mailto:vic23mora@gmail.com?"><img src="./media/plataformas/email.png" alt="email"></a></li>
+                        <li><a class="link-media" href="https://ig.me/m/@vic_mora23"><img src="./media/plataformas/instagram.png" alt="instagram"></a></li>
+                        <li><a class="link-media" href="https://www.facebook.com/victor.morarosique?"><img src="./media/plataformas/fb.png" alt="facebook"></a></li>
+                    </ul>
+                </article>    
             </article>
-            <article class="apartado">
-                <h4>Vega p&aacute;del company</h4>
-                <div class="enlaces">
-                    <a class="link-footer" href="./nosotros.html">Sobre nosotros</a>
-                    <a class="link-footer" href="./index.html">Trabaja con nosotros</a>
-                    <a class="link-footer" href="./index.html">Colaboraciones</a>
-                </div>
+            <article class="enlaces">
+                <details>
+                    <summary>Vega p&aacute;del company</summary>
+                    <ul>
+                        <li><a class="link-footer" href="./nosotros.html">Qu&iacute;enes somos</a></li>
+                        <li><a class="link-footer" href="./index.html">Trabaja con nosotros</a></li>
+                        <li><a class="link-footer" href="./index.html">Colaboraciones</a></li>
+                        <li><a class="link-footer" href="./index.html">Medio ambiente</a></li>
+                    </ul>
+                </details>
+                <details>
+                    <summary>Atenci&oacute;n al cliente</summary>
+                    <ul>
+                        <li><a class="link-footer" href="./index.html">Env&iacute;os y devoluciones</a></li>
+                        <li><a class="link-footer" href="./index.html">M&eacute;todos de pago</a></li>
+                        <li><a class="link-footer" href="./index.html">Cont&aacute;ctanos</a></li>
+                        <li><a class="link-footer" href="./index.html">Consulta tu pedido</a></li>
+                    </ul>
+                </details>
+                <details>
+                    <summary>Informaci&oacute;n general</summary>
+                    <ul>
+                        <li><a class="link-footer" href="./index.html">Condiciones de uso</a></li>
+                        <li><a class="link-footer" href="./index.html">Aviso legal</a></li>
+                        <li><a class="link-footer" href="./index.html">Pol&iacute;tica de privacidad</a></li>
+                        <li><a class="link-footer" href="./index.html">Pol&iacute;tica de cookies</a></li>
+                    </ul>
+                </details>
             </article>
-            <article class="apartado">
-                <h4>Atenci&oacute;n al cliente</h4>
-                <div class="enlaces">
-                    <a class="link-footer" href="./index.html">Env&iacute;os y devoluciones</a>
-                    <a class="link-footer" href="./index.html">M&eacute;todos de pago</a>
-                    <a class="link-footer" href="./index.html">Cont&aacute;ctanos</a>
-                    <a class="link-footer" href="./index.html">Consulta tu pedido</a>
-                </div>
-            </article>
-            <article class="apartado">
-                <h4>Informaci&oacute;n general</h4>
-                <div class="enlaces">
-                    <a class="link-footer" href="./index.html">Condiciones de uso</a>
-                    <a class="link-footer" href="./index.html">Aviso legal</a>
-                    <a class="link-footer" href="./index.html">Pol&iacute;tica de privacidad</a>
-                    <a class="link-footer" href="./index.html">Pol&iacute;tica de cookies</a>
-                </div>
-            </article>
-            <article class="apartado">
-                <h4>M&eacute;todos de pago</h4>
-                <div class="metodosPago">
-                    <img src="./media/icons/mastercard.svg" alt="Mastercard">
-                    <img src="./media/icons/visa.svg" alt="Visa">
-                    <img src="./media/icons/paypal.svg" alt="Paypal">
-                </div>
+            <article class="apartado" id="metodosPago">
+                <ul>
+                    <li><img src="./media/icons/mastercard.svg" alt="Mastercard"></li>
+                    <li><img src="./media/icons/visa.svg" alt="Visa"></li>
+                    <li><img src="./media/icons/paypal.svg" alt="Paypal"></li>
+                </ul>
             </article>
         </footer>
     </body>
